@@ -100,7 +100,6 @@ const addUser = async (req = request, res = response) => {
             return;
         }
 
-
         const userAdded = await conn.query(usersModel.addRow, [...user], (err) => {
             if (err) throw err;
         })
